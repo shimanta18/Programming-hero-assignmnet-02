@@ -11,13 +11,23 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
+<body >
+    <style>
+        @media screen and (max-width:576px){
+            body{
+                flex-direction: column;
+            }
+            img{
+                width: auto;
+            }
+        }
+    </style>
     <!--Navbar section-->
-    <header class="flex justify-between items-center px-30 py-1  ">
-        <div class="Promo">
-            <img src="assets/logo.png">
+    <header class="flex justify-between items-center px-4 py-4 md:px-20 ">
+        <div class="w-28">
+            <img src="assets/logo.png" class="">
         </div>
-        <nav>
+        <nav class="hidden md:flex space-x-6 font-semibold">
             <ul class="flex space-x-6 font-semibold">
                 <li><a href="" class="font-bold text-black">Home</a></li>
                 <li><a href="" class="text-gray-400">Shop</a></li>
@@ -27,10 +37,17 @@
                     <a href="" class="">Cart($56)</a></li>
             </ul>
         </nav>
+
+        <!--mobile nav-->
+        <div class="md:hidden flex items-center space-x-1">
+            <a href="#" class="flex items-center gap-1 text-sm font-medium">
+            <img src="assets/shopping-cart.jpg" class="w-5 h-5">Cart ($56)
+            </a>
+        </div>
     </header>
 <!--Banner section-->
 <section class="flex  flex-row items-center py-12 py-30 ">
-    <div class="lg:w-1/2 ml-15 ">
+    <div class="lg:w-1/2 ml-4 md:ml-12 ">
         <h1 class="text-black text-5xl font-extrabold ">
             AlWAYS <span class="text-orange-500">FRESH <br>FLOWERS</span></h1>
         <p class=" mt-6 text-lg text-gray-600 max-w-xl leading-relaxed">Indulge your senses with the beauty and fragrance of<br> our fresh flower shop. From classic roses to exotic<br> blooms, we offer a wide variety of fresh flowers that <br>are perfect for any occasion</p>
@@ -44,12 +61,12 @@
     <div>
         <h1 class="text-5xl text-center font-bold"><span class="text-orange-500 ">Our</span> Plants</h1>
         <p class="mt-4 text-center text-gray-500 max-w-2xl mx-auto">Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh.</p>
-<div class=" grid grid-cols-1 sm:grid-cols-4 lg;grid-cols-4 gap-10 mt-12">
+<div class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-12">
     <div class="bg-white rounded-xl ">
         <img src="assets/sample-flower-image.png">
-        <h3 class="mt-4 text-xl mb-2 ml-18 font-semibold">Lilly Blossom</h3>
-        <p class="ml-25 text-lg font-bold">20 USD</p>
-        <button class=" mt-2 px-21 py-2 bg-orange-500 text-white ">ADD TO CART</button>
+        <h3 class="mt-4 text-xl mb-2 ml-4  font-semibold">Lilly Blossom</h3>
+        <p class="ml-4 text-lg font-bold">20 USD</p>
+        <button class=" mt-2 px-6 py-2 bg-orange-500 text-white ">ADD TO CART</button>
     </div>
 
     <div class="bg-white rounded-xl ">
@@ -108,7 +125,7 @@
 <section class="mr-20 ml-10 flex flex-col md:flex-row items-center  gap-8 mx-auto">
     <div class="relative w-full md:w-1/2">
         <img src="assets/flower-store.png" class="mt-20 w-full ">
-        <img src="assets/trusted-badge.png" class="absolute top-4 left-60  px-50 py-1">
+        <img src="assets/trusted-badge.png" class="rounded-lg absolute top-4 sm:top-6 left-6  px-20  ml-30 ">
     </div>
     <div class=" md:1/2">
         <h1 class="mb-10 font-bold text-6xl">Flower & Plants <br>Lover</h1>
@@ -128,7 +145,7 @@
         <p class="mt-1 text-gray-500 text-xl">Indulge your senses with the beauty and fragrance of our fresh flower shop. From<br> classic roses to exotic blooms, we offer a wide variety of fresh.</p>
     </div>
 <!--Deals grid-->
-<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 ml-30 ">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 px-6 ">
 <!--Left column-->
     <div class="flex flex-col gap-4 md:col-span-1">
 <!--bloom plant-->
@@ -163,7 +180,7 @@
     <div class="text-center ">
         <h2 class="text-4xl font-bold mb-6 text-white">Join the colorful Bunch</h2>
 
-        <form class="flex items-center">
+        <form class="flex flex-col sm:flex-row items-center gap-4 max-w-2xl mx-auto">
             <input
                 type="email"
                 Placeholder="Write email"
